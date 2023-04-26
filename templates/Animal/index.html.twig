@@ -1,0 +1,11 @@
+<h1>creation Animaux</h1>
+<h1>MODIFICATION de ferme</h1>
+{% for item in animal %}
+<div class="example-wrapper">
+    <p>{{item.nom}},{{item.espece}}</p>
+    <button><a href="/updateAnimal/{{item.id}}">Modifier</a></button>
+    <button class="btn"><a href="/deleteAnimal/{{item.id}}">REMOVE</a></button>
+</div>
+{% endfor %}
+<a href="{{ path('app_newAnimal') }}">Nouveau</a>
+
